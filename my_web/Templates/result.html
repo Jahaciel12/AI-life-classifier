@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Container for the result content */
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-size: 2.5rem;
+            color: #3b3b98;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Result Box Styling */
+        .result-box {
+            border: 2px solid #3b3b98;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Link Styling */
+        a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #3b3b98;
+            padding: 10px 20px;
+            border: 2px solid #3b3b98;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #3b3b98;
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p, .result-box {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Classification Result</h1>
+        <p>Here is the result from your DNA sequence:</p>
+        <div class="result-box">
+            <strong>{{ result }}</strong>
+        </div>
+        <a href="/">Upload another file</a>
+    </div>
+</body>
+</html>

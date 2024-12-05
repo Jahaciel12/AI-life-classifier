@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livingclass.ai</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Container for the main content */
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-size: 2.5rem;
+            color: #3b3b98;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* List Styles */
+        ol {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="file"] {
+            font-size: 1rem;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
+        input[type="file"]:hover {
+            border-color: #3b3b98;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border: none;
+            background-color: #3b3b98;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2d2d7f;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p, ol li {
+                font-size: 1rem;
+            }
+
+            input[type="file"], button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LivingClass.AI</h1>
+        <p>This AI allows to classify an unknown DNA sequence into its origin:</p>
+        <ol>
+            <li>Human</li>
+            <li>Bacteria</li>
+            <li>Virus</li>
+        </ol>
+        <p>Upload your DNA sequence in FASTA format:</p>
+        <form action="/uploads" method="POST" enctype="multipart/form-data">
+            <label for="file">Select a file:</label>
+            <input type="file" id="file" name="file" accept=".fasta" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
